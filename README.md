@@ -21,7 +21,7 @@ Which customers create the most value, which groups are becoming inactive, and h
 
 ## Dataset
 
-The analysis uses the [UCI Online Retail dataset](https://archive.ics.uci.edu/dataset/352/online+retail): transaction-level data from a UK-based non-store retailer from **1 December 2010 to 9 December 2011**. The original workbook is downloaded locally and is intentionally excluded from version control.
+The analysis uses the [UCI Online Retail dataset](https://archive.ics.uci.edu/dataset/352/online+retail): transaction-level data from a UK-based non-store retailer from **1 December 2010 to 9 December 2011**. Source retrieved on **24 October 2026**. The original workbook is downloaded locally and is intentionally excluded from version control.
 
 ## Observed results
 

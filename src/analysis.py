@@ -5,8 +5,11 @@ import pandas as pd
 
 
 def _score(series: pd.Series, reverse: bool = False) -> pd.Series:
-    ranked = series.rank(method="first", ascending=not reverse)
-    return pd.qcut(ranked, 5, labels=[1, 2, 3, 4, 5]).astype(int)
+    """Return 1–5 RFM scores without splitting identical values across bins."""
+    if series.nunique(dropna=True) <= 1:
+        return pd.Series(3, index=series.index, dtype=int)
+    percentile = series.rank(method="average", pct=True, ascending=not reverse)
+    return (percentile.mul(5).apply(np.ceil).clip(1, 5)).astype(int)
 
 
 def build_customer_rfm(transactions: pd.DataFrame, reference_date: pd.Timestamp | None = None) -> pd.DataFrame:

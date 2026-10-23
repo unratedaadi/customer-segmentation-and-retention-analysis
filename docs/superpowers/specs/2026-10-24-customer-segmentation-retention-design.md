@@ -48,7 +48,7 @@ The dashboard follows the approved mockup: a clear title and source scope; KPI c
 
 ## Constraints and quality checks
 
-- Python 3.11+ with pandas, numpy, matplotlib/seaborn, Streamlit, and openpyxl.
+- Python 3.9+ with pandas, numpy, matplotlib/seaborn, Streamlit, and openpyxl.
 - Store raw data under `data/raw/` and generated, versionable aggregates under `data/processed/`; keep the source download URL and retrieval date in the README.
 - Keep raw downloaded data out of version control because of its size; preserve a short download script and source link instead.
 - Test invoice filtering, revenue calculation, RFM output, cohort calculation, and missing future cohort behavior.

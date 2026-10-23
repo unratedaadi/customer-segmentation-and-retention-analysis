@@ -6,7 +6,7 @@
 
 **Architecture:** A data module downloads and cleans the original workbook, then derives transaction-, customer-, and cohort-level tables. A notebook uses those tables to explain the methodology and static figures, while the Streamlit app loads the same functions/data for an interactive dashboard. Tests lock down the business definitions for valid orders, RFM segmentation, and cohort retention.
 
-**Tech Stack:** Python 3.11+, pandas, numpy, openpyxl, matplotlib, seaborn, plotly, Streamlit, pytest, Jupyter.
+**Tech Stack:** Python 3.9+, pandas, numpy, openpyxl, matplotlib, seaborn, plotly, Streamlit, pytest, Jupyter.
 
 **Spec:** `docs/superpowers/specs/2026-10-24-customer-segmentation-retention-design.md`
 

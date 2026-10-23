@@ -26,3 +26,18 @@ def test_segments_are_exclusive_and_cohort_future_month_is_missing():
     )
     matrix, _ = build_cohort_retention(transactions, max_periods=3)
     assert pd.isna(matrix.loc[pd.Timestamp("2021-02-01"), 1])
+
+
+def test_rfm_scores_keep_tied_values_together_and_support_one_customer():
+    tied = pd.DataFrame(
+        {
+            "CustomerID": [1, 2, 3],
+            "InvoiceNo": ["A", "B", "C"],
+            "InvoiceDate": pd.to_datetime(["2021-01-01"] * 3),
+            "Revenue": [10.0, 10.0, 10.0],
+        }
+    )
+    scored = build_customer_rfm(tied, reference_date=pd.Timestamp("2021-02-01"))
+    assert scored["F_Score"].nunique() == 1
+    assert scored["M_Score"].nunique() == 1
+    assert len(build_customer_rfm(tied.iloc[:1], reference_date=pd.Timestamp("2021-02-01"))) == 1
