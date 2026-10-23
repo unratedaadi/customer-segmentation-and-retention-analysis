@@ -27,8 +27,8 @@ The analysis uses the [UCI Online Retail dataset](https://archive.ics.uci.edu/da
 
 After cleaning invalid orders, the dataset contains **4,338 identifiable customers** and **£8.91M in positive purchase revenue**.
 
-- **947 Champions** generated approximately **£5.75M**, making them the core value segment.
-- **658 At-Risk customers** represented roughly **£821K** in prior revenue and are a practical priority for re-engagement.
+- **911 Champions** generated approximately **£5.69M**, making them the core value segment.
+- **765 At-Risk customers** represented roughly **£922K** in prior revenue and are a practical priority for re-engagement.
 - **2,845 customers** placed at least two distinct valid orders.
 - Revenue peaked in **November 2011 (£1.16M)**, showing strong end-of-year seasonality.
 
@@ -91,7 +91,7 @@ PYTHONPATH=. jupyter nbconvert --execute --to notebook --inplace notebooks/custo
 
 ## Resume-ready description
 
-> Built an end-to-end customer segmentation and retention analysis using real UCI retail transaction data. Processed 500K+ raw order lines, created RFM customer segments, measured cohort retention, and developed a Streamlit dashboard to identify high-value and at-risk customers; uncovered £5.75M in revenue from Champion customers and £821K associated with At-Risk customers.
+> Built an end-to-end customer segmentation and retention analysis using real UCI retail transaction data. Processed 500K+ raw order lines, created RFM customer segments, measured cohort retention, and developed a Streamlit dashboard to identify high-value and at-risk customers; uncovered £5.69M in revenue from Champion customers and £922K associated with At-Risk customers.
 
 ## Limitations
 
